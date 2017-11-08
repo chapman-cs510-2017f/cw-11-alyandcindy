@@ -65,9 +65,9 @@ void mset(MATRIX *m, const MINDEX row, const MINDEX col, const MVALUE v) {
 }
 
 MVALUE mget(const MATRIX *m, const MINDEX row, const MINDEX col) {
-  /*
-   * CODE GOES HERE
-   */
+    int getval;
+    getval = *(m->mat + (m->cols * row) + col);
+    return getval;
 }
 
 // Abstraction layer in case implementation of VALUE changes later
@@ -83,9 +83,20 @@ void print_matrix(const MATRIX *m) {
   // print values of matrix separated by tabs
   // with each row on a separate line
   printf("Matrix (rows: %d, cols: %d) \n", maxr, maxc);
-  /* 
-   * CODE GOES HERE
-   */
+  
+  int r, c;
+  
+  for (int r=0; r < maxr; r++)
+  {
+      for (int c=0; c < maxc; c++)
+      {
+          int printval = mget(m,r,c);
+          printf("%d\t", printval);
+      }
+      printf("\n");
+  }
 }
 
-// Implementation for add_matrix goes below
+MATRIX add_matrix(const MATRIX *m, const MATRIX *n){
+    
+}
