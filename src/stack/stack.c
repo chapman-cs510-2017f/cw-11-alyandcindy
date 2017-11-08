@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "stack.h"
 
+SVALUE SVALUE_ERR = -9999;
+
 // create a new stack 
 STACK new_stack() {
     STACK new = NULL; // stack is empty

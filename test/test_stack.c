@@ -2,7 +2,8 @@
 #include "../src/stack/stack.h"
 
 int main(void) {
-    STACK s = new_stack();
+    STACK s;
+    s = new_stack();
     SVALUE val;
 
     puts("Putting items on the stack: 1,2,3");
