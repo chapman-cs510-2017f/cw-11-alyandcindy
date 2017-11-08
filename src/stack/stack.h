@@ -21,13 +21,13 @@ typedef struct stack * STACK;
 STACK new_stack();
 
 // Setter for pushing a value onto the stack (why STACK *?)
-void push_stack(STACK *, SVALUE);
+void push_stack(STACK *s, SVALUE val);
 
 // Getter for popping a value off the stack (why STACK *?)
-SVALUE pop_stack(STACK *);
+SVALUE pop_stack(STACK *s);
 
 // Printer for svalue
-void print_svalue(SVALUE);
+void print_svalue(SVALUE val);
 
 // Printer for stack
-void print_stack(STACK);
+void print_stack(STACK s);
